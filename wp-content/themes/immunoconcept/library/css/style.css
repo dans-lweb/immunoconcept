@@ -1697,7 +1697,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #5c6b80;
-  background-color: #eaedf2;
+  background-color: white;
   -webkit-font-smoothing: antialiased; }
 
 /********************
@@ -1743,7 +1743,7 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 96%;
+  width: 100%;
   margin: 0 auto; }
 
 /*********************
@@ -1805,12 +1805,17 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #323944; }
+  background-color: white; }
 
 #logo {
   margin: 0.75em 0; }
   #logo a {
     color: white; }
+
+    #logo img{
+      height:115px;
+      margin:20px 0 0 20px;
+    }
 
 /*********************
 NAVIGATION STYLES
@@ -1858,8 +1863,13 @@ and more scalable.
 HOME STYLES
 *********************/
 
-.page-id-7 .wrap{
+.page .wrap{
   width:100%;
+}
+
+.page-id-7 section .vc_row:not(:first-child), .page section{
+  width:1400px;
+  margin:auto!important;
 }
 
 .page-id-7 .wrap .entry-content, .vc_column_container>.vc_column-inner{
@@ -1884,7 +1894,7 @@ HOME STYLES
   border-top: 2px dashed #e73478;
 }
 
-.home-archive article{
+.home-archive article:not(:first-child){
   padding-top:30px;
 }
 
@@ -1894,15 +1904,12 @@ HOME STYLES
 
 .part-title img{
   z-index: 1000000;
-  top: -55px;
+  top: -15px;
   position: absolute;
 }
 
 .part-title h2{
-  position: absolute;
-  top: -63px;
   padding-left: 100px;
-  width: calc(100% - 20px);
   background-color: #29235c;
   margin-left: 20px;
   color:white;
@@ -1912,8 +1919,16 @@ HOME STYLES
   width:calc(100% - 40px);
 }
 
-div.svc_post_grid_s6 header a.svc_read_more{
+div.svc_post_grid_s6 header a.svc_read_more, div.svc_post_grid_s6 header .svc_info{
   font-size:15px;
+}
+
+div.svc_post_grid_s6 header .svc_title{
+  font-size:20px;
+}
+
+div.svc_post_grid_s6 header .svg_post_meta{
+  font-size:12px;
 }
 
 .left-icon .aio-icon-left .aio-icon, .left-icon .aio-icon-left .aio-icon-img, .aio-icon-img .img-icon{
@@ -1926,6 +1941,7 @@ div.svc_post_grid_s6 header a.svc_read_more{
 
 .aio-icon-component{
   margin:28px;
+  margin-top: 0px;
 }
 .aio-icon-title{
   width:99%;
@@ -1993,15 +2009,22 @@ img.ultb3-img{
 }
 
 /*********************
+RESEARCH PAGE
+*********************/
+.ult-ih-wrapper{
+  border-color:rgba(255,255,255,0)!important;
+}
+
+/*********************
 POSTS & CONTENT STYLES
 *********************/
-#content {
-  margin-top: 1.5em; }
+#inner-content {
+  margin-top: 1.5em; 
+  }
 
 .hentry {
   background-color: white;
   border-radius: 3px;
-  margin-bottom: 1.5em;
   border: 1px solid #cccccc; }
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
@@ -2036,6 +2059,7 @@ POSTS & CONTENT STYLES
 /* entry content */
 .entry-content {
   padding: 1.5em 1.5em 0;
+  margin-bottom:50px;
   /*
   image alignment on a screen this size may be
   a bit difficult. It's set to start aligning
@@ -2322,9 +2346,33 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #323944;
-  color: #f8f9fa; }
+  background-color: white;
+  color: #29235c; 
+  margin-left: 20px;
+}
 
+.footer .logos img{
+  height:50px;
+  width:auto;
+  margin-top: 20px;
+}
+
+#inner-footer div:nth-child(2) {
+  float:left;
+}
+
+.footer .footer-nav{
+  margin:1em;
+  text-align:right;
+}
+
+.footer .footer-nav a{
+  color:#29235c!important;
+}
+
+.footer .footer-nav a:first-child::after{
+  content:" | ";
+}
 /*
 if you checked out the link above:
 http://www.alistapart.com/articles/organizing-mobile/
@@ -2573,7 +2621,7 @@ you can add resource intensive styles.
   
   ******************************************************************/
   .wrap {
-    width: 1040px; } }
+    width: 1000px; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
