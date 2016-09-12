@@ -14,6 +14,17 @@ require_once( 'library/bones.php' );
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
 // require_once( 'library/admin.php' );
 
+add_filter( 'single_template', function ($single_template) {
+
+     global $post;
+
+    if ( in_category( 'grand-public' ) ) {
+          $single_template = dirname( __FILE__ ) . '/single-grand-public.php';
+     }
+     return $single_template;
+
+}, 10, 3 );
+
 /*********************
 LAUNCH BONES
 Let's get everything up and running.

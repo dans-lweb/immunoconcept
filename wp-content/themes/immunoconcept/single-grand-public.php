@@ -1,40 +1,23 @@
-<?php
-/*
- * CUSTOM POST TYPE TEMPLATE
- *
- * This is the custom post type post template. If you edit the post type name, you've got
- * to change the name of this template to reflect that name change.
- *
- * For Example, if your custom post type is "register_post_type( 'bookmarks')",
- * then your single template should be single-bookmarks.php
- *
- * Be aware that you should rename 'custom_cat' and 'custom_tag' to the appropiate custom
- * category and taxonomy slugs, or this template will not finish to load properly.
- *
- * For more info: http://codex.wordpress.org/Post_Type_Templates
-*/
-?>
-
 <?php get_header(); ?>
 
 			<div id="content">
 
 				<div id="inner-content" class="wrap cf">
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article class="team-member" id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+							<article class="grand-public" id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
 
 								<section class="entry-content cf">
-									<div class="col-xs-2">
+									<div class="col-sm-6">
 									<?php if ( has_post_thumbnail() ) : ?>
 										<?php the_post_thumbnail(); ?>
 									<?php endif; ?>
 								</div>
-								<div class="col-xs-10">
-									<div>
+								<div class="col-sm-6">
+									<div class="GP-title">
 										<h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
 										<span><?php the_meta(); ?></span>
 									</div>
@@ -93,7 +76,7 @@
 
 						</main>
 
-						
+					
 
 				</div>
 

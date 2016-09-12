@@ -2199,6 +2199,62 @@ POSTS & CONTENT STYLES
 .tags {
   margin: 0; }
 
+ /*********************
+grand-public STYLES
+*********************/
+.grand-public .GP-title{
+  width:80%;
+  margin:auto;
+}
+
+.grand-public img{
+  width:100%;
+  height:auto;
+  margin:auto;
+}
+
+.grand-public h1{
+  background-color:#e73178;
+  color:white;
+  padding:5px 10px;
+  text-align: center;
+}
+
+.grand-public hr{
+  border-bottom:2px dotted #e73178;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+  /*********************
+TEAM MEMBER STYLES
+*********************/
+
+.team-member .col-xs-2 img{
+  width:100%;
+  height:auto;
+}
+
+.team-member h1 {
+  color:#e73178;
+}
+
+.team-member a{
+  text-decoration: underline;
+}
+.team-member .col-xs-10 div, .team-member .col-xs-10 p{
+  padding-left:15px;
+}
+
+.team-member .col-xs-10 div span{
+  color:#29235c;
+  font-weight:bold;
+}
+
+.team-member .col-xs-10 >div{
+  border-left:2px dotted #29235c;
+}
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
