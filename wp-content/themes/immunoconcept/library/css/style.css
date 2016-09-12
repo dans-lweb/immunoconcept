@@ -1789,10 +1789,10 @@ h2, .h2 {
   margin-bottom: 0.375em; }
 
 h3, .h3 {
-  font-size: 1.125em; }
+  font-size: 1.5em; }
 
 h4, .h4 {
-  font-size: 1.1em;
+  font-size: 1.25em;
   font-weight: 700; }
 
 h5, .h5 {
@@ -1814,7 +1814,7 @@ HEADER STYLES
 
     #logo img{
       height:115px;
-      margin:20px 0 0 20px;
+      margin:20px 0 20px 20px;
     }
 
 /*********************
@@ -1827,6 +1827,12 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+nav{
+  border-top: 1px solid #29235c;
+  border-bottom: 1px solid #29235c;
+  text-transform: uppercase;
+}
+
 .nav {
   border-bottom: 0;
   margin: 0;
@@ -1863,14 +1869,11 @@ and more scalable.
 HOME STYLES
 *********************/
 
-.page .wrap{
+header .wrap, footer .wrap{
   width:100%;
 }
 
-.page-id-7 section .vc_row:not(:first-child), .page section{
-  width:1400px;
-  margin:auto!important;
-}
+
 
 .page-id-7 .wrap .entry-content, .vc_column_container>.vc_column-inner{
   padding:0;
@@ -1913,6 +1916,14 @@ HOME STYLES
   background-color: #29235c;
   margin-left: 20px;
   color:white;
+}
+
+.part-title.research h2{
+  background-color: #00a3e5;
+}
+
+.part-title.public h2{
+  background-color: #e73178;
 }
 
 .part-title.full h2{
@@ -2015,6 +2026,49 @@ RESEARCH PAGE
   border-color:rgba(255,255,255,0)!important;
 }
 
+.vc_tta-panel{
+  margin-bottom:5px;
+}
+
+.vc_tta-panel.vc_active .vc_tta-panel-title{
+  background-color:#00a3e5;
+}
+
+.vc_tta-panel.vc_active .vc_tta-panel-title a span{
+  color:white!important;
+}
+
+.vc_tta-panel .vc_tta-panel-title{
+  border:1px solid #00a3e5;
+  
+}
+
+.vc_tta-panel .vc_tta-panel-body img{
+  margin-right:40px;
+}
+
+.eventrocket .schedule .tribe-event-date-start{
+  font-size:1.20em;
+  color:#e73178;
+}
+
+.eventrocket .schedule{
+  font-size:1.15em;
+  color:#29235c;
+  margin-bottom:25px;
+}
+
+.eventrocket .post-thumb{
+  width:25%;
+  height:auto;
+  margin-right:40px;
+  float:left;
+}
+
+
+.eventrocket:not(:last-child) .clearfix{
+  border-bottom: 2px dotted #e73178;
+}
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -2025,7 +2079,7 @@ POSTS & CONTENT STYLES
 .hentry {
   background-color: white;
   border-radius: 3px;
-  border: 1px solid #cccccc; }
+  }
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }
@@ -2436,6 +2490,13 @@ tweeners.
   /*********************
   POSTS & CONTENT STYLES
   *********************/
+  #logo img{
+    height:60px;
+  }
+
+  h1{
+    font-size:1.5em;
+  }
   /* entry content */
   .entry-content {
     /* at this larger size, we can start to align images */ }
@@ -2494,6 +2555,9 @@ you can add resource intensive styles.
   /*********************
   HEADER STYLES
   *********************/
+  h1{
+    font-size:1.5em;
+  }
   /*********************
   NAVIGATION STYLES
   *********************/
@@ -2503,35 +2567,40 @@ you can add resource intensive styles.
     /* highlight current page */
     /* end current highlighters */ }
     .nav ul {
-      background: #323944;
+      background: white;
       margin-top: 0; }
     .nav li {
       float: left;
       position: relative;
+      width:20%;
+      text-align:center;
+    }
       /*
       plan your menus and drop-downs wisely.
       */
       /* showing sub-menus */ }
       .nav li a {
         border-bottom: 0;
+        color:#29235c;
         /*
         you can use hover styles here even though this size
         has the possibility of being a mobile device.
         */ }
         .nav li a:hover, .nav li a:focus {
           color: white;
-          text-decoration: underline; }
+          }
       .nav li ul.sub-menu,
       .nav li ul.children {
         margin-top: 0;
         border: 1px solid #ccc;
-        border-top: 0;
         position: absolute;
         visibility: hidden;
         z-index: 8999;
+        width:100%;
         /* highlight sub-menu current page */ }
         .nav li ul.sub-menu li,
         .nav li ul.children li {
+          width:100%;
           /*
           if you need to go deeper, go nuts
           just remember deeper menus suck
@@ -2542,7 +2611,7 @@ you can add resource intensive styles.
             padding-left: 10px;
             border-right: 0;
             display: block;
-            width: 180px;
+            width: auto;
             border-bottom: 1px solid #ccc; }
           .nav li ul.sub-menu li:last-child a,
           .nav li ul.children li:last-child a {
@@ -2626,7 +2695,17 @@ you can add resource intensive styles.
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
 *********************/
-@media only screen and (min-width: 1240px) {
+@media only screen and (min-width: 1235px) {
+  .wrap {
+    width: 1200px; }
+
+  #logo img{
+    height:115px;
+  }
+
+  h1{
+    font-size:2em;
+  }
   /******************************************************************
   Site Name: 
   Author: 
@@ -2636,7 +2715,26 @@ This is for the larger monitors and possibly full screen viewers.
   You can add some advanced styles here if you like. This kicks in
   on larger screens.
   
-  ******************************************************************/ }
+  ******************************************************************/
+   }
+
+
+@media only screen and (min-width: 1418px) {
+  .wrap {
+    width: 1400px; }
+
+
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Super Large Monitor Stylesheet
+  
+  You can add some advanced styles here if you like. This kicks in
+  on larger screens.
+  
+  ******************************************************************/
+   }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
