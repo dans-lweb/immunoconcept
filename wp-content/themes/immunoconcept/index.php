@@ -8,7 +8,8 @@
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" >
+								<div class="archive-post">
 
 								<header class="article-header">
 
@@ -23,9 +24,18 @@
 									</p>
 
 								</header>
+								<div class="col-sm-4">
+									<?php if ( has_post_thumbnail() ) : ?>
+										<?php the_post_thumbnail( 'medium' ); ?>
+									<?php endif; ?>
+								</div>
+								<div class="col-sm-8">
+									<section class="entry-content cf">
+									
+								
+									<?php the_excerpt(); ?>
+								
 
-								<section class="entry-content cf">
-									<?php the_content(); ?>
 								</section>
 
 								<footer class="article-footer cf">
@@ -41,6 +51,8 @@
 
 								</footer>
 
+								</div>
+								<div class="clearfix"></div>
 							</article>
 
 							<?php endwhile; ?>
@@ -59,14 +71,18 @@
 										<footer class="article-footer">
 												<p><?php _e( 'This is the error message in the index.php template.', 'bonestheme' ); ?></p>
 										</footer>
+									</div>
+
 									</article>
+
 
 							<?php endif; ?>
 
 
 						</main>
 
-					<?php get_sidebar(); ?>
+
+					
 
 				</div>
 

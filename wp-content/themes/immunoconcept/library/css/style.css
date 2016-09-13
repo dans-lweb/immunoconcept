@@ -1893,12 +1893,12 @@ header .wrap, footer .wrap{
   box-shadow:none;
 }
 
-.page-id-7 div.svc_post_grid article:not(:first-child){
-  border-top: 2px dashed #e73478;
+.page-id-7 div.svc_post_grid article:not(:last-child){
+  border-bottom: 2px dashed #e73478;
 }
 
 .home-archive article:not(:first-child){
-  padding-top:30px;
+  margin-top:30px;
 }
 
 .part-title{
@@ -2230,7 +2230,7 @@ grand-public STYLES
 TEAM MEMBER STYLES
 *********************/
 
-.team-member .col-xs-2 img{
+.team-member .col-sm-2 img{
   width:100%;
   height:auto;
 }
@@ -2242,17 +2242,64 @@ TEAM MEMBER STYLES
 .team-member a{
   text-decoration: underline;
 }
-.team-member .col-xs-10 div, .team-member .col-xs-10 p{
+.team-member .col-sm-10 div, .team-member .col-sm-10 p{
   padding-left:15px;
 }
 
-.team-member .col-xs-10 div span{
+.team-member .col-sm-10 div span{
   color:#29235c;
   font-weight:bold;
 }
 
-.team-member .col-xs-10 >div{
+.team-member .col-sm-10 >div{
   border-left:2px dotted #29235c;
+}
+
+.expert-header {
+  text-align:center;
+  margin-bottom: 20px;
+}
+
+.archive-post .col-sm-4 img{
+  width:100%;
+  height:auto;
+}
+
+.archive-post .col-sm-8 .entry-content{
+  margin-bottom: 0;
+}
+
+main article:not(:last-child) .archive-post .clearfix{
+  border-bottom: 2px dotted #e73178;
+  padding-bottom:20px;
+}
+
+/*********************
+CONTACT FORM STYLES
+*********************/
+
+.wpcf7-form input, .wpcf7-form textarea{
+  max-width:100%;
+  background-color:#c2e4ee;
+}
+
+.wpcf7-form textarea:active, .wpcf7-form textarea:focus{
+background-color: #f7f8fa;
+}
+
+.wpcf7-form .send {
+  text-align:right;
+}
+
+.wpcf7-form .send input {
+  float:right;
+  background-color:#e73178;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 0px;
+  padding: 7px 36px;
+  margin-bottom: 30px;
 }
 
 /******************************************************************
@@ -2499,6 +2546,43 @@ This is for devices like the Galaxy Note or something that's
 larger than an iPhone but smaller than a tablet. Let's call them
 tweeners.
 *********************/
+@media (max-width:481px){
+#logo img{
+    height:60px;
+  }
+
+  h1{
+    font-size:1.5em;
+  }
+
+  .part-title h2{
+  padding-left: 20%;
+}
+  
+  .vc_empty_space, .tribe-mini-calendar-grid-wrapper{
+    display:none;
+  }
+.expert-header img{
+  width:100%;
+  height:auto;
+}
+}
+
+@media (max-width:768px){
+.ult-ih-list{
+    text-align: center!important;
+  }
+
+  .team-member .col-sm-2 img, .archive-post .col-sm-4 img{
+  width:auto;
+}
+.archive-post .col-sm-4, .grand-public .col-sm-6{
+  text-align:center;
+  margin-bottom:15px;
+}
+
+}
+
 @media only screen and (min-width: 481px) {
   /******************************************************************
   Site Name:
@@ -2553,6 +2637,13 @@ tweeners.
   h1{
     font-size:1.5em;
   }
+
+  .vc_empty_space{
+    display:none;
+  }
+
+
+
   /* entry content */
   .entry-content {
     /* at this larger size, we can start to align images */ }
@@ -2602,6 +2693,7 @@ you can add resource intensive styles.
   /*********************
   GENERAL STYLES
   *********************/
+
   /*********************
   LAYOUT & GRID STYLES
   *********************/
@@ -2727,26 +2819,23 @@ you can add resource intensive styles.
     the footer.
     */ }
 
-  /* end .footer-links */ }
+  /* end .footer-links */ 
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 *********************/
-@media only screen and (min-width: 1030px) {
-  /******************************************************************
-  Site Name:
-  Author:
-  
-  Stylesheet: Desktop Stylsheet
-  
-  This is the desktop size. It's larger than an iPad so it will only
-  be seen on the Desktop.
-  
-  ******************************************************************/
-  .wrap {
-    width: 1000px; } }
+@media (max-width: 1235px){
+  .ult-ih-list-item, .ult-ih-image-block, .ult-ih-item{
+    height:300px!important;
+    width:300px!important;
+  }
+
+ .archive-post .entry-content{
+  padding-top:0;
+  }
+}
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.

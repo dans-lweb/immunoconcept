@@ -31,9 +31,14 @@
 
 								<section class="entry-content cf">
 
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-
+								<div class="col-sm-4">
+									<?php if ( has_post_thumbnail() ) : ?>
+										<?php the_post_thumbnail( 'medium' ); ?>
+									<?php endif; ?>
+								</div>
+								<div class="col-sm-8">
 									<?php the_excerpt(); ?>
+								</div>
 
 								</section>
 
@@ -65,7 +70,7 @@
 
 						</main>
 
-					<?php get_sidebar(); ?>
+					
 
 				</div>
 

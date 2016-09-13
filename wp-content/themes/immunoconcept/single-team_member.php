@@ -28,12 +28,12 @@
 							<article class="team-member" id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
 
 								<section class="entry-content cf">
-									<div class="col-xs-2">
+									<div class="col-sm-2">
 									<?php if ( has_post_thumbnail() ) : ?>
 										<?php the_post_thumbnail(); ?>
 									<?php endif; ?>
 								</div>
-								<div class="col-xs-10">
+								<div class="col-sm-10">
 									<div>
 										<h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
 										<span><?php the_meta(); ?></span>

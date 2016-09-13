@@ -17,6 +17,10 @@
               <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 
                 <header class="article-header entry-header">
+                  <div class="expert-header">
+                  <?php if ( has_post_thumbnail() ) : ?>
+                    <?php the_post_thumbnail( 'full' ); ?>
+                  <?php endif; ?></div>
 
                   <h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
 
